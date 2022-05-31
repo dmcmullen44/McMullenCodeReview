@@ -1,0 +1,36 @@
+﻿@model IEnumerable<McMullenCodeReview.Models.PhotoModel>
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Photos</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Url)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+l            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+
+        </tr>}
+    </tbody>
+</table>
