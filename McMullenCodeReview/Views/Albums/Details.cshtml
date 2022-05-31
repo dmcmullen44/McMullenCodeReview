@@ -6,9 +6,6 @@
 
 <h1>Photos</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -28,7 +25,7 @@ l            <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Url)
+                <img src="@Html.DisplayFor(modelItem => item.Url)"><img/>
             </td>
 
         </tr>}

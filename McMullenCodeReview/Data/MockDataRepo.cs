@@ -26,7 +26,8 @@ namespace McMullenCodeReview.Data
                new PhotoModel{ AlbumID=1, Id=2, Title="Photo 2",Url = "https://via.placeholder.com/600/771796", thumbnailUrl="https://via.placeholder.com/150/771796"},
                new PhotoModel{ AlbumID=1, Id=3, Title="Photo 3",Url = "https://via.placeholder.com/600/24f355", thumbnailUrl="https://via.placeholder.com/150/24f355"}
             };
-            throw new NotImplementedException();
+
+            return photos;
         }
     }
 }
