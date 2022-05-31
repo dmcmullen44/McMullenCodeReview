@@ -1,33 +1,26 @@
 ﻿@model IEnumerable<McMullenCodeReview.Models.PhotoModel>
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Photos";
 }
 
 <h1>Photos</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Url)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
+<table class="table ">
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-l            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                <img src="@Html.DisplayFor(modelItem => item.Url)"><img/>
-            </td>
-
-        </tr>}
+        @foreach (var item in Model)
+        {
+            <tr>
+                l
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="@Html.DisplayFor(modelItem => item.Url)"><img />
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
