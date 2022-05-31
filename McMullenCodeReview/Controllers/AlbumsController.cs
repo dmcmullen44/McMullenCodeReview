@@ -10,8 +10,14 @@ namespace McMullenCodeReview.Controllers
 {
     public class AlbumsController : Controller
     {
-        //private readonly IDataRepo _data;
-        private readonly MockDataRepo _repo = new MockDataRepo();
+        private readonly IDataRepo _repo;
+
+        //Dependency Injection 
+        public AlbumsController(IDataRepo repo)
+        {
+            _repo = repo;
+        }
+        //private readonly IDataRepo _data;        
                 
         public IActionResult Index()
         {
